@@ -64,7 +64,7 @@ public class PageableLuceneQueryResultsImplJUnitTest {
 
       @Override
       public Map answer(InvocationOnMock invocation) throws Throwable {
-        Collection<String> keys = invocation.getArgumentAt(0, Collection.class);
+        Collection<String> keys = invocation.getArgument(0);
         Map<String, String> results = new HashMap<String, String>();
         for (String key : keys) {
           results.put(key, key.replace("key_", "value_"));
